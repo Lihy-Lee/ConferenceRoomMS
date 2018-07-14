@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.meetingroom.dao.BookingDao">
+	<insert id="insertBooking"
+		parameterType="com.meetingroom.entity.Booking" useGeneratedKeys="true"
+		keyColumn="booking_id" keyProperty="bookingId">
+		insert into
+		booking(user_id,meeting_id,create_time,start_time,end_time,status)
+		values(#{user.userId},#{meetingRoom.meetingId},#{createTime},#{startTime},#{endTime},#{status})
+	</insert>
+
+	<select id="selectAllForExcel"
+		resultType="com.meetingroom.entity.Booking">
+		select
+		booking_id,user_id,meeting_id,create_time,start_time,end_time,status
+		from booking
+	</select>
+	<select id="selectAllBooking"
+		resultType="com.meetingroom.entity.Booking">
+		select
+		booking_id,user_id,meeting_id,create_time,start_time,end_time,status
+		from booking
+	</select>
+	<select id="checkBookingUser" resultType="com.meetingroom.entity.Booking" parameterType="map">
+		select * from booking
+		where user_id = #{userId} and booking_id = #{bookingId}
+	</select>
+	<select id="selectAllBookingByUserId"
+		resultType="com.meetingroom.entity.Booking">
+		select * from booking
+		where user_id = #{userId}
+	</select>
+
+	<select id="selectHadBookingByUserId"
+		resultType="com.meetingroom.entity.Booking">
+		select * from booking
+		where user_id = #{userId} and
+		start_time &gt; now() and status = 0
+	</select>
+
+	<select id="selectBookingByBookingId"
+		resultType="com.meetingroom.entity.Booking">
+		select * from booking
+		where booking_id = #{bookingId}
+	</select>
+
+	<update id="updateBooking"
+		parameterType="com.meetingroom.entity.Booking">
+		update booking
+		set status = #{status}
+		where booking_id =
+		#{bookingId}
+	</update>
+
+</mapper>

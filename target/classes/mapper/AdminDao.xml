@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.meetingroom.dao.AdminDao">
+	<insert id="insertAdmin"
+		parameterType="com.meetingroom.entity.Admin">
+		insert into
+		administrator(admin_id,password)
+		values(#{adminId},#{password})
+	</insert>
+
+	<delete id="deleteAdmin">
+		delete from administrator
+		where admin_id=#{adminId}
+	</delete>
+
+	<select id="queryAdmin"
+		resultType="com.meetingroom.entity.Admin">
+		select * from administrator
+		where admin_id = #{adminId}
+	</select>
+	<select id="checkAdminId" parameterType="Integer" resultType="int">
+		SELECT count(1) from administrator
+		WHERE
+		admin_id=#{adminId}
+	</select>
+	<select id="selectLogin"
+		resultType="com.meetingroom.entity.Admin" parameterType="map">
+		SELECT * from
+		administrator
+		WHERE admin_id=#{adminId}
+		and password = #{password}
+	</select>
+	<update id="updateAdmin"
+		parameterType="com.meetingroom.entity.Admin">
+		update administrator
+		set password = #{password}
+		where
+		admin_id =
+		#{adminId}
+	</update>
+
+
+
+</mapper>

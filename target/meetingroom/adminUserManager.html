@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meetingRoomWebAPP</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700">
+    <link rel="stylesheet" href="assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Carousel_Image_Slider.css">
+    <link rel="stylesheet" href="assets/css/Contact-FormModal-Contact-Form-with-Google-Map.css">
+    <link rel="stylesheet" href="assets/css/countdown-timer.css">
+    <link rel="stylesheet" href="assets/css/countdown-timer1.css">
+    <link rel="stylesheet" href="assets/css/customHomePageMid.css">
+    <link rel="stylesheet" href="assets/css/Data-Table.css">
+    <link rel="stylesheet" href="assets/css/Data-Table2.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/homepagefoot.css">
+    <link rel="stylesheet" href="assets/css/homepageMid.css">
+    <link rel="stylesheet" href="assets/css/homepagewrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/loginOptionPageMid.css">
+    <link rel="stylesheet" href="assets/css/loginPageMid.css">
+    <link rel="stylesheet" href="assets/css/MUSA_timeline.css">
+    <link rel="stylesheet" href="assets/css/MUSA_timeline1.css">
+    <link rel="stylesheet" href="assets/css/Newsletter-Subscription-Form.css">
+    <link rel="stylesheet" href="assets/css/packetTrackerMid1.css">
+    <link rel="stylesheet" href="assets/css/packetTracterMid1.css">
+    <link rel="stylesheet" href="assets/css/packetTracterMid2.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form1.css">
+    <link rel="stylesheet" href="assets/css/select2.css">
+    <link rel="stylesheet" href="assets/css/signUpPageMid.css">
+    <link rel="stylesheet" href="assets/css/styles-1.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/User-Tasks-and-User-Activity-Streams---List-Group-Component.css">
+    <link rel="stylesheet" href="assets/css/zzp_nav.css">
+</head>
+
+<body style="margin-right:0px;">
+    <div class="article-dual-column"></div>
+    <nav class="navbar navbar-light navbar-expand-md bg-danger navigation-clean">
+        <div class="container"><a class="navbar-brand" href="#">会议室预订管理系统</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="adminHomepage.html">返回上一页</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#" data-bs-hover-animate="pulse" id="ad_nav_name">管理员zzp</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#" id="ad_quit">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col"><label class="col-form-label float-right" id="jinjijiuhuche">--------------------------------</label></div>
+    </div><button class="btn btn-info float-right" type="button" id="adadduserbt" style="background-color:rgb(157,220,247);color:rgb(70,87,101);font-size:17px;height:40px;margin:14px;">添加用户</button>
+    <div class="table-responsive" id="tbs">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>用户ID</th>
+                    <th>用户名</th>
+                    <th>性别</th>
+                    <th>邮箱&nbsp;</th>
+                    <th>类型</th>
+                    <th>部门</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr id="ttt"></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="footer-dark" style="height:190px;padding:32px;margin-top:257px;">
+        <footer>
+            <div class="container">
+                <div class="row" style="margin:-12px;">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 style="margin:12px;">About us</h3>
+                        <ul>
+                            <li></li>
+                            <li><a href="#">Team 200</a></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3 style="margin:12px;">About Project&nbsp;</h3>
+                        <p style="padding:0px 10px 0px 10px;margin:-2px;font-size:14px;">&nbsp; The project of Meeting Room Management System,specifical a mini &nbsp;System for managing the meetingroom as also to collate all the staff information in the company.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 style="margin:12px;font-size:16px;">Contact us</h3>
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li></li>
+                            <li><label style="color:rgb(188,188,188);">zzpmys@gmail.com</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="copyright" style="height:22px;padding:1px;">200© 2018</p>
+            </div>
+        </footer>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="adadduser">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">添加用户</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <div class="container profile profile-view" id="profile">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-lg-3" style="width:122px;"><label class="col-form-label">用户ID</label></div>
+                                <div class="col" style="height:49px;"><input class="form-control float-left" type="text" id="adaddID" style="width:233px;"></div>
+                            </div>
+                        </form>
+                        <form>
+                            <div class="form-row">
+                                <div class="col-lg-3"><label class="col-form-label">用户名</label></div>
+                                <div class="col" style="height:48px;width:233px;"><input class="form-control" type="text" id="adaddname" style="width:233px;"></div>
+                            </div>
+                        </form>
+                        <form style="height:45px;">
+                            <div class="form-row">
+                                <div class="col-lg-3"><label class="col-form-label">性别</label></div>
+                                <div class="col"><select class="form-control" id="adaddgender" style="width:180px;" v-model="selected"><optgroup label="性别"><option value="男">男</option><option value="女">女</option></optgroup></select></div>
+                            </div>
+                        </form>
+                        <form>
+                            <div class="form-row">
+                                <div class="col-lg-3" style="width:156px;"><label class="col-form-label">用户类型</label></div>
+                                <div class="col" style="height:44px;"><select class="form-control" id="adaddtype" style="width:180px;"><optgroup label="用户类型"><option value="经理">经理</option><option value="普通员工">普通员工</option></optgroup></select></div>
+                            </div>
+                        </form>
+                        <form>
+                            <div class="form-row">
+                                <div class="col-lg-3"><label class="col-form-label">所属部门</label></div>
+                                <div class="col"><select class="form-control" id="adadddepartment"><optgroup label="所属部门"><option value="策划部">策划部</option><option value="市场部">市场部</option><option value="运维部">运维部</option></optgroup></select></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">关闭</button><button class="btn btn-primary" type="button" id="adaddsave">确定</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="adusermodify">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">用户修改</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body"><label class="d-none" id="lle">Label</label>
+                    <div class="container profile profile-view" id="profile">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-lg-3" style="width:122px;"><label class="col-form-label">用户ID</label></div>
+                                <div class="col" style="height:49px;"><input class="form-control float-left" type="text" disabled="" id="admodifyID" style="width:233px;"></div>
+                            </div>
+                        </form>
+                        <form>
+                            <div class="form-row">
+                                <div class="col-lg-3"><label class="col-form-label">用户名</label></div>
+                                <div class="col" style="height:48px;"><input class="form-control" type="text" id="admodifyname" style="width:233px;"></div>
+                            </div>
+                        </form>
+                        <form>
+                            <div class="form-row" style="height:44px;">
+                                <div class="col-lg-3"><label class="col-form-label">性别</label></div>
+                                <div class="col"><select class="form-control" id="admodifygender" style="width:180px;"><optgroup label="性别"><option value="男">男</option><option value="女">女</option></optgroup></select></div>
+                            </div>
+                        </form>
+                        <form>
+                            <div class="form-row">
+                                <div class="col-lg-3" style="width:156px;"><label class="col-form-label">用户类型</label></div>
+                                <div class="col" style="height:44px;"><select class="form-control" id="admodifytype" style="width:180px;"><optgroup label="用户类型"><option value="经理">经理</option><option value="普通员工">普通员工</option></optgroup></select></div>
+                            </div>
+                        </form>
+                        <form>
+                            <div class="form-row">
+                                <div class="col-lg-3"><label class="col-form-label">所属部门</label></div>
+                                <div class="col"><select class="form-control" id="admodifydepartment" style="width:180px;"><optgroup label="所属部门"><option value="策划部">策划部</option><option value="市场部">市场部</option><option value="运维部">运维部</option></optgroup></select></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">退出</button><button class="btn btn-primary" type="button" id="confirmbtn">确定</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="preview">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Tips</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p>修改成功！</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button" id="yesbtn">确定</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="previewx">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Tips</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p>删除成功！</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button" id="exitbtn">确定</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="md">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Title</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body"><label id="l1">Label</label>
+                    <p>The content of your modal.</p><input type="text" id="le"><input type="text" id="le1"></div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/adminHomepage.js"></script>
+    <script src="assets/js/adminLoginPage.js"></script>
+    <script src="assets/js/adminRoomManager.js"></script>
+    <script src="assets/js/adminUserManager.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="assets/js/email.js"></script>
+    <script src="assets/js/host.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="assets/js/jquery.qrcode.min.js"></script>
+    <script src="assets/js/userBooking.js"></script>
+    <script src="assets/js/userBookingHistory.js"></script>
+    <script src="assets/js/userBookingTime.js"></script>
+    <script src="assets/js/userHomepage.js"></script>
+    <script src="assets/js/userInfo.js"></script>
+    <script src="assets/js/userLoginPage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.meetingroom.dao.AttendDao">
+
+	<insert id="insertAttend" parameterType="map">
+		insert into attend(booking_id,user_id)
+		values	(#{bookingId},#{userId})
+
+	</insert>
+
+	<delete id="deleteAttend">
+		delete from attend
+		where booking_id=#{bookingId}
+	</delete>
+
+	<select id="queryAttendByBookingId"
+		resultType="com.meetingroom.entity.User">
+		select user_id,name,email
+		from attend natural join user
+		where booking_id=#{bookingId}
+	</select>
+
+</mapper>
+

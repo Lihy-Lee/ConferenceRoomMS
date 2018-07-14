@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.meetingroom.dao.UserDao">
+
+	<select id="checkEmailByUserId" parameterType="map"
+		resultType="int">
+		select count(1) from USER
+		where email = #{email}
+		and user_id
+		!= #{userId}
+	</select>
+
+	<select id="checkPassword" parameterType="map" resultType="int">
+		SELECT count(1) from USER
+		WHERE user_id = #{userId} and password =
+		#{passwordOld}
+	</select>
+
+	<select id="selectLogin"
+		resultType="com.meetingroom.entity.User" parameterType="map">
+		SELECT * from
+		user
+		WHERE user_id=#{userId}
+		and password = #{password}
+	</select>
+
+	<select id="queryAllUser"
+		resultType="com.meetingroom.entity.User">
+		SELECT
+		user_id,name,gender,department,role,email
+		from user
+		where status = 0
+	</select>
+	<select id="queryUserNameByUserId"
+		resultType="com.meetingroom.entity.User" parameterType="Integer">
+		SELECT
+		user_id,name from user
+		WHERE user_id=#{userId}
+	</select>
+
+	<select id="checkUserId" resultType="int"
+		parameterType="Integer">
+		SELECT count(1) from user
+		WHERE user_id=#{userId}
+	</select>
+
+	<select id="checkEmail" resultType="int" parameterType="string">
+		select
+		count(1) from user
+		where email = #{email}
+	</select>
+
+	<insert id="insertUser"
+		parameterType="com.meetingroom.entity.User">
+		insert into
+		user(user_id,name,gender,department,role,password,status)
+		values(#{userId},#{name},#{gender},#{department},#{role},#{password},#{status})
+	</insert>
+
+	<select id="queryUserforLogin"
+		resultType="com.meetingroom.entity.User">
+		select user_id,password,status
+		from user
+		where
+		user_id=#{userId}
+	</select>
+
+	<select id="queryUserByUserId"
+		resultType="com.meetingroom.entity.User">
+		select user_id,name,gender,department,role,password,email
+		from
+		user
+		where user_id=#{userId}
+	</select>
+
+
+	<update id="updatePersonInfo"
+		parameterType="com.meetingroom.entity.User">
+		update user
+		<set>
+			<if test="name!=null">name=#{name},</if>
+			<if test="gender!=null">gender=#{gender},</if>
+			<if test="password!=null">password=#{password},</if>
+			<if test="email!=null">email=#{email},</if>
+			<if test="department!=null">department=#{department},</if>
+			<if test="role!=null">role=#{role},</if>
+			<if test="status!=null">status=#{status}</if>
+		</set>
+		where user_id=#{userId}
+	</update>
+
+
+</mapper>

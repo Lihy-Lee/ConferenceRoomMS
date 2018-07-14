@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.meetingroom.dao.MeetingRoomDao">
+
+	<insert id="insertMeetingRoom"
+		parameterType="com.meetingroom.entity.MeetingRoom"
+		useGeneratedKeys="true" keyColumn="meeting_id" keyProperty="meetingId">
+		insert into
+		meeting_room(floor,room,capacity,dev)
+		values(#{floor},#{room},#{capacity},#{dev})
+	</insert>
+
+	<delete id="deleteMeetingRoom">
+		delete from meeting_room
+		where meeting_id=#{meetingId}
+	</delete>
+
+	<select id="queryAllMeetingRoom"
+		resultType="com.meetingroom.entity.MeetingRoom">
+		select * from meeting_room
+	</select>
+
+	<select id="queryMeetingRoomforFree"
+		resultType="com.meetingroom.entity.MeetingRoom">
+		SELECT meeting_id,floor,room,capacity,dev
+		FROM meeting_room
+		LEFT JOIN (
+		SELECT
+		meeting_id AS m
+		FROM
+		booking
+		WHERE
+
+		(
+		start_time &lt;= #{startTime} AND end_time &gt;= #{startTime} )
+		OR
+		(
+		start_time &lt;= #{endTime} AND end_time &gt;= #{endTime} )
+		OR
+		(
+		start_time &gt;= #{startTime} AND end_time &lt;= #{endTime})
+		)
+		AS t1 ON
+		meeting_room.meeting_id = t1.m
+		WHERE t1.m IS NULL 
+	</select>
+
+	<select id="queryMeetingRoomById"
+		resultType="com.meetingroom.entity.MeetingRoom">
+		select * from meeting_room
+		where meeting_id=#{meetingId}
+	</select>
+
+	<update id="updateMeetingRoom"
+		parameterType="com.meetingroom.entity.MeetingRoom">
+		update meeting_room
+		<set>
+			<if test="capacity!=null">capacity=#{capacity},</if>
+			<if test="dev!=null">dev=#{dev}</if>
+		</set>
+		where meeting_id=#{meetingId}
+	</update>
+
+</mapper>

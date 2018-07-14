@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meetingRoomWebAPP</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700">
+    <link rel="stylesheet" href="assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Carousel_Image_Slider.css">
+    <link rel="stylesheet" href="assets/css/Contact-FormModal-Contact-Form-with-Google-Map.css">
+    <link rel="stylesheet" href="assets/css/countdown-timer.css">
+    <link rel="stylesheet" href="assets/css/countdown-timer1.css">
+    <link rel="stylesheet" href="assets/css/customHomePageMid.css">
+    <link rel="stylesheet" href="assets/css/Data-Table.css">
+    <link rel="stylesheet" href="assets/css/Data-Table2.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/homepagefoot.css">
+    <link rel="stylesheet" href="assets/css/homepageMid.css">
+    <link rel="stylesheet" href="assets/css/homepagewrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/loginOptionPageMid.css">
+    <link rel="stylesheet" href="assets/css/loginPageMid.css">
+    <link rel="stylesheet" href="assets/css/MUSA_timeline.css">
+    <link rel="stylesheet" href="assets/css/MUSA_timeline1.css">
+    <link rel="stylesheet" href="assets/css/Newsletter-Subscription-Form.css">
+    <link rel="stylesheet" href="assets/css/packetTrackerMid1.css">
+    <link rel="stylesheet" href="assets/css/packetTracterMid1.css">
+    <link rel="stylesheet" href="assets/css/packetTracterMid2.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="assets/css/Profile-Edit-Form1.css">
+    <link rel="stylesheet" href="assets/css/select2.css">
+    <link rel="stylesheet" href="assets/css/signUpPageMid.css">
+    <link rel="stylesheet" href="assets/css/styles-1.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/User-Tasks-and-User-Activity-Streams---List-Group-Component.css">
+    <link rel="stylesheet" href="assets/css/zzp_nav.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md bg-danger navigation-clean">
+        <div class="container"><a class="navbar-brand" href="#"><strong>会议室预订管理系统</strong><br></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="userHomepage.html">返回上一页</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#" data-bs-hover-animate="pulse" id="user_nav_name">用户ZZP</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#" id="user_quit">退出</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Contact Information</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body">
+                        <form action="javascript:void();" method="get" id="contactForm"><input class="form-control" type="hidden" name="Introduction" value="This email was sent from www.mywebsite.com"><input class="form-control" type="hidden" name="subject" value="My Contact Form"><input class="form-control" type="hidden"
+                                name="to" value="email@mywebsite.com">
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div id="modal-successfail"></div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6" id="modal-message">
+                                    <fieldset>
+                                        <legend><i class="fa fa-envelope"></i> Contact Us</legend>
+                                    </fieldset>
+                                    <div class="form-group has-feedback"><label for="modal_from_name">Name</label><input class="form-control" type="text" name="from_name" required="" placeholder="Full Name" id="modal_from_name" tabindex="-1"></div>
+                                    <div class="form-group has-feedback"><label for="modal_from_email">Email</label><input class="form-control" type="email" name="from_email" required="" placeholder="Email Address" id="modal_from_email"></div>
+                                    <div class="form-row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group has-feedback"><label for="modal_from_phone">Phone</label><input class="form-control" type="text" name="from_phone" placeholder="Primary Phone" id="modal_from_phone"></div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group"><label for="modal_calltime">Best Time to Call</label><select class="form-control" name="Call Time" id="modal_calltime"><optgroup label="This is a group"><option value="12" selected="">This is item 1</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label for="modal_comments">Comments</label><textarea class="form-control" rows="5" name="Comments" placeholder="Enter comments here" id="modal_comments"></textarea></div>
+                                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Send <i class="fa fa-chevron-circle-right"></i></button></div>
+                                    <hr>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <legend> <i class="fa fa-location-arrow"></i> Locate Us</legend>
+                                    </fieldset>
+                                    <div class="form-row">
+                                        <div class="col-md-12">
+                                            <div class="static-map"><a href="https://www.google.com/maps/place/2+15th+St+NW+Washington+DC+20024" target="_blank"><img class="img-fluid" src="http://maps.googleapis.com/maps/api/staticmap?autoscale=2&amp;size=600x210&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C582+1801+W+International+Speedway+Blvd+Daytona+Beach+FL+32114&amp;zoom=12" alt="Google Map of Washington Monument"></a></div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <fieldset>
+                                                <legend><i class="fa fa-envelope"></i> Contact Us</legend>
+                                            </fieldset>
+                                            <div><span><strong>Name</strong></span></div>
+                                            <div><span>email@address.com</span></div>
+                                            <div><span>www.awebsite.com</span></div>
+                                            <hr>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <fieldset>
+                                                <legend><i class="fa fa-location-arrow"></i> Our Address</legend>
+                                            </fieldset>
+                                            <div><span><strong>Office Name</strong></span></div>
+                                            <div><span>55 Icannot Dr.</span></div>
+                                            <div><span>Daytona Beach, FL 81500</span></div>
+                                            <div><abbr data-toggle="tooltip" data-placement="top" title="Office Phone: 555-867-5309">O:</abbr> 555-867-5309</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form action="javascript:void();" method="get" id="contactForm"><input class="form-control" type="hidden" name="Introduction" value="This email was sent from www.mywebsite.com"><input class="form-control" type="hidden" name="subject" value="My Contact Form"><input class="form-control" type="hidden" name="to"
+                value="email@mywebsite.com">
+            <div class="form-row">
+                <div class="col-md-6">
+                    <div id="successfail"></div>
+                </div>
+            </div>
+        </form>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modify-person">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">修改用户邮箱</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body">
+                        <div class="card">
+                            <div class="card-header" style="padding-bottom:0px;">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group"><input type="password" placeholder="         原密码" id="oldPassword" name="" style="width:265px;height:47px;margin-top:0px;padding-top:0px;padding-bottom:0px;"></div>
+                                </div>
+                            </div>
+                            <div class="card-header" style="width:464px;height:76px;">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group"><input type="password" required="" placeholder="         新密码" id="newPassword" name="" style="width:265px;height:47px;margin:0px;margin-bottom:-4px;"></div>
+                                </div>
+                            </div>
+                            <div class="card-header" type="password" style="height:76px;">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group"><input type="password" placeholder="        确认密码" id="checkPassword" name="" style="width:265px;height:47px;"></div>
+                                </div>
+                            </div>
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-lg-6 offset-lg-1" style="margin-left:0px;"><input type="email" name="email" placeholder="Your Email" id="yourEmail" style="width:262px;height:47px;color:rgb(49,52,55);padding:19px;padding-top:13px;padding-bottom:14px;padding-left:34px;padding-right:16px;margin-left:14px;"></div>
+                                    <div
+                                        class="col-lg-4"><button class="btn btn-primary" type="submit" id="send_verify_req" style="margin-left:65px;margin-top:5px;">发送验证码</button></div>
+                            </div>
+                        </div>
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-lg-7"><input type="email" placeholder="输入验证码" id="code" style="width:262px;height:47px;color:rgb(49,52,55);padding:19px;padding-top:13px;padding-bottom:14px;padding-left:34px;padding-right:16px;margin-left:14px;"></div>
+                                <div class="col"><button class="btn btn-secondary" type="button" style="background-color:rgb(92,152,87);font-style:normal;font-weight:bold;width:106px;margin-left:27px;margin-bottom:0px;margin-top:5px;">确认</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button" id="cancel-modify-personbtn">取消</button><button class="btn btn-primary" type="button" id="modifyconfirmbtn">确认</button></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modify-email">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">修改用户邮箱</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-lg-6 offset-lg-1" style="margin-left:0px;"><input type="email" name="email" placeholder="Your Email" id="yourEmailzzp" style="width:262px;height:47px;color:rgb(49,52,55);padding:19px;padding-top:13px;padding-bottom:14px;padding-left:34px;padding-right:16px;margin-left:14px;"></div>
+                                <div
+                                    class="col-lg-4"><button class="btn btn-primary" type="submit" id="sendzzp" style="margin-left:65px;margin-top:5px;">发送验证码</button></div>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-lg-7"><input type="email" placeholder="输入验证码" id="codezzp" style="width:262px;height:47px;color:rgb(49,52,55);padding:19px;padding-top:13px;padding-bottom:14px;padding-left:34px;padding-right:16px;margin-left:14px;"></div>
+                            <div class="col"><button class="btn btn-secondary" type="button" id="enterzzp" style="background-color:rgb(92,152,87);font-style:normal;font-weight:bold;width:106px;margin-left:27px;margin-bottom:0px;margin-top:5px;">确认</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer"><button class="btn btn-primary" type="button" id="cancel-modify-personbtn">取消</button><button class="btn btn-primary" type="button" id="confirmEmailbtnzzp">确认</button></div>
+        </div>
+    </div>
+    </div>
+    <h2 class="text-center align-items-center align-content-center" style="margin:30px 50px 40px 40px;margin-right:40px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 个人中心</h2>
+    <div>
+        <div class="container">
+            <div class="table-responsive" style="width:578px;margin:0px;margin-left:243px;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th style="width:150px;">用户ID：</th>
+                            <th id="persionID"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>用户名：</td>
+                            <td id="persionName"></td>
+                        </tr>
+                        <tr>
+                            <td>性别：</td>
+                            <td id="sex" style="width:268px;"></td>
+                        </tr>
+                        <tr>
+                            <td>邮箱地址：</td>
+                            <td style="width:256px;"><label id="emailAddress" style="margin-left:0;height:29px;width:126px;"></label><button class="btn btn-danger float-right" type="button" id="modify-emailbtn" style="width:65px;height:40px;margin-left:2px;font-weight:bold;">修改</button></td>
+                        </tr>
+                        <tr>
+                            <td>密码：</td>
+                            <td style="width:256px;"><label id="userpassword" style="margin-left:0;height:29px;width:126px;"></label><button class="btn btn-danger float-right" type="button" id="alertpassword" style="width:65px;height:40px;margin-left:2px;font-weight:bold;">修改</button></td>
+                        </tr>
+                        <tr>
+                            <td>所属部门：</td>
+                            <td id="department"></td>
+                        </tr>
+                        <tr>
+                            <td>用户类型：</td>
+                            <td id="userStype"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><i class="fa fa-wrench" style="color:rgb(255,255,255);width:50px;"></i></div>
+    </div>
+    <div class="footer-dark" style="height:190px;padding:32px;">
+        <footer>
+            <div class="container">
+                <div class="row" style="margin:-12px;">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 style="margin:12px;">About us</h3>
+                        <ul>
+                            <li></li>
+                            <li><a href="#">Team 200</a></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3 style="margin:12px;">About Project&nbsp;</h3>
+                        <p style="padding:0px 10px 0px 10px;margin:-2px;font-size:14px;">&nbsp; The project of Meeting Room Management System,specifical a mini &nbsp;System for managing the meetingroom as also to collate all the staff information in the company.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 style="margin:12px;font-size:16px;">Contact us</h3>
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li></li>
+                            <li><label style="color:rgb(188,188,188);">zzpmys@gmail.com</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="copyright" style="height:22px;padding:1px;">200© 2018</p>
+            </div>
+        </footer>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modify-password">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">修改用户密码</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-header" style="padding-bottom:0px;">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group"><input type="password" placeholder="原密码" id="oldPasswordzzp" name="" style="width:265px;height:47px;margin-top:0px;padding-top:0px;padding-bottom:0px;"></div>
+                            </div>
+                        </div>
+                        <div class="card-header" style="width:464px;height:76px;">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group"><input type="password" required="" placeholder="新密码" id="newPasswordzzp" name="" style="width:265px;height:47px;margin:0px;margin-bottom:-4px;"></div>
+                            </div>
+                        </div>
+                        <div class="card-header" type="password" style="height:76px;">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group"><input type="password" placeholder="确认密码" id="checkPasswordzzp" name="" style="width:265px;height:47px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">取消</button><button class="btn btn-primary" type="button" id="confirmPasswordbtn">确认</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/adminHomepage.js"></script>
+    <script src="assets/js/adminLoginPage.js"></script>
+    <script src="assets/js/adminRoomManager.js"></script>
+    <script src="assets/js/adminUserManager.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="assets/js/email.js"></script>
+    <script src="assets/js/host.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="assets/js/jquery.qrcode.min.js"></script>
+    <script src="assets/js/userBooking.js"></script>
+    <script src="assets/js/userBookingHistory.js"></script>
+    <script src="assets/js/userBookingTime.js"></script>
+    <script src="assets/js/userHomepage.js"></script>
+    <script src="assets/js/userInfo.js"></script>
+    <script src="assets/js/userLoginPage.js"></script>
+</body>
+
+</html>
